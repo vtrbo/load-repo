@@ -1,0 +1,76 @@
+{
+  "name": "load-repo",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@7.8.0",
+  "description": "Victor Bo's Download Git Repository.",
+  "author": {
+    "name": "Victor Bo",
+    "email": "hi@vtrbo.cn"
+  },
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/vtrbo",
+  "homepage": "https://github.com/vtrbo/load-repo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vtrbo/load-repo.git"
+  },
+  "bugs": "https://github.com/vtrbo/load-repo/issues",
+  "keywords": [
+    "vtrbo",
+    "load-repo",
+    "download",
+    "git",
+    "repository"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish --access=public",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/git-clone": "^0.2.0",
+    "@types/node": "^18.6.4",
+    "@types/rimraf": "^3.0.2",
+    "@vtrbo/eslint-config": "^0.0.6",
+    "@vtrbo/ni": "^0.0.3",
+    "@vtrbo/utils": "0.0.11",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.21.0",
+    "esno": "^0.16.3",
+    "git-clone": "^0.2.0",
+    "pnpm": "^7.8.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.6",
+    "vite": "^3.0.4",
+    "vitest": "^0.20.3"
+  }
+}
