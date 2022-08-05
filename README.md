@@ -12,15 +12,19 @@ npm install load-repo
 
 ### Api
 > `loadRepo(repo: string): void`
+<br>
 
 > `loadRepo(repo: string, path?: string): void`
+<br>
 
 > `loadRepo(repo: string, path?: string, options?: IOptions): void`
+<br>
 
-> `loadRepo(repo: string, path?: string, callback: (error?: Error) => void): void`
+> `loadRepo(repo: string, path?: string, callback?: (error?: Error) => void): void`
+<br>
 
-> `loadRepo(repo: string, path?: string, options?: IOptions, callback: (error?: Error) => void): void`
-
+> `loadRepo(repo: string, path?: string, options?: IOptions, callback?: (error?: Error) => void): void`
+<br>
 
 <details>
 <summary>repo</summary><br>
@@ -81,7 +85,7 @@ const callback = (error: Error) => {
 }
 ```
 
-</details><br>
+</details>
 
 ## 开源许可证
 
